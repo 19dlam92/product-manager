@@ -4,22 +4,24 @@ const jwt = require('jsonwebtoken');
 
 
 
-module.exports.findAllProductManagers
+module.exports = {
+
+  // findAllProductManagers
 
 
-
-module.exports.findOneProductManager
-
+  // findOneProductManager
 
 
-module.exports.updateOneProductManager
+  // updateOneProductManager
+  
+  
+  // deleteOneProductManager
+  
+  
+  // createProductManager
+  
 
+}
 
-
-module.exports.deleteOneProductManager
-
-
-
-module.exports.createProductManager
 
 
