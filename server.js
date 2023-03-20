@@ -1,29 +1,15 @@
+const cookieParser = require('cookie-parser');
 const express = require("express");
+const cors = require('cors');
+const multer = require('multer');
 const app = express();
 const port = 8000;
+app.use( cors({ credentials: true, origin: 'http://localhost3000/' }) );
+app.use( cookieParser() );
+app.use( express.json() );
+app.use( express.urlencoded({ extended: true }) );
+require('dotenv').config();
+require("./server/config/mongoose.config")
+require("./server/routes/newProject.route")(app)
 
-
-const mongoose = require("mongoose");
-const db_name = "ProductManager"
-
-mongoose.connect( `mongodb+srv://19dlam92:KAMIkazeazn92@cluster0.a97t2kg.mongodb.net/${ db_name }?retryWrites=true&w=majority`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-    .then(() => console.log("Established a connection to the database"))
-    .catch(err => console.log("Something went wrong when connecting to the database", err))
-
-
-
-
-app.get("/api/hello", (req, res) => {
-    res.json({ msg: "hello world!" })
-})
-
-
-
-
-
-
-app.listen( port, () => console.log(`Listening on port: ${ port }`) );
-// app.listen - runs the server
+app.listen( port, () => console.log(Listening on port: ${ port }) );
