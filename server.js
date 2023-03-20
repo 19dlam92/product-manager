@@ -10,6 +10,6 @@ app.use( express.json() );
 app.use( express.urlencoded({ extended: true }) );
 require('dotenv').config();
 require("./server/config/mongoose.config")
-require("./server/routes/newProject.route")(app)
+require("./server/routes/productManager.route")(app)
 
-app.listen( port, () => console.log(Listening on port: ${ port }) );
+app.listen( port, () => console.log(`Listening on port: ${ port }`) );

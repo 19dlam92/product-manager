@@ -1,17 +1,17 @@
-const NewProjectController = require('../controllers/newProject.controller');
+const ProductManagerController = require('../controllers/productManager.controller');
 
 
 
 module.exports = (app) => {
 
-    app.get("/api/NewProject", NewProjectController.findAllNewProjects);
+  app.get("/api/ProductManager", ProductManagerController.findAllProductManagers);
 
-    app.get("/api/NewProject/:id", NewProjectController.findOneNewProject);
+  app.get("/api/ProductManager/:id", ProductManagerController.findOneProductManager);
 
-    app.put("/api/NewProject/:id", NewProjectController.updateOneNewProject);
+  app.put("/api/ProductManager/:id", ProductManagerController.updateOneProductManager);
 
-    app.post("/api/NewProject", NewProjectController.createNewProject);
+  app.post("/api/ProductManager", ProductManagerController.createProductManager);
 
-    app.delete("/api/NewProject/:id", NewProjectController.deleteOneNewProject);
+  app.delete("/api/ProductManager/:id", ProductManagerController.deleteOneProductManager);
 
 }
