@@ -15,3 +15,7 @@ module.exports = (app) => {
   app.delete("/api/ProductManager/:id", ProductManagerController.deleteOneProductManager);
 
 }
+
+// :id refers to req.params.id
+// so it could be . . . . 
+// :anythingYouWant ---> req.params.anythingYouWant

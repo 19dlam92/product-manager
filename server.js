@@ -13,3 +13,7 @@ require("./server/config/mongoose.config")
 require("./server/routes/productManager.route")(app)
 
 app.listen( port, () => console.log(`Listening on port: ${ port }`) );
+
+
+
+// lines 9 - 10 allow the app to recieve POST info

@@ -3,7 +3,7 @@ const db_name = "productManagerDB"
 
 
 
-mongoose.connect(`mongodb+srv://root:root@reactdojo.f237n.mongodb.net/${db_name}?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://root:root@cluster0.ta3x0wn.mongodb.net/${db_name}?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
