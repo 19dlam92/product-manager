@@ -17,7 +17,7 @@ const ProductManagerSchema = new mongoose.Schema({
   age: {
     type: Number,
     required: [true, "Your age is required!"],
-    min: [2, "Please enter at least 2 numbers"]
+    min: [1, "Please enter at least 1 numbers"]
   },
   description: {
     type: String,

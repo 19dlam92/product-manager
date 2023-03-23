@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const AllProductManagers = (props) => {
@@ -30,8 +29,8 @@ const AllProductManagers = (props) => {
       .catch( err => {
         console.error( err )
       })
-
   }
+  // lines 21 - 33 is same page deleting
 
   return(
     <>

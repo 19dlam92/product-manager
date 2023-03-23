@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
-import { useParams, useHistory } from 'react-router'
+import { useHistory } from 'react-router-dom'
+import { useParams } from 'react-router'
 
 const DetailsProductManager = () => {
 
@@ -10,7 +10,7 @@ const DetailsProductManager = () => {
   const { id } = useParams();
   // { id } MATCHES with the exact path = "/ . . . . /:id"
 
-  useEffect (() => {
+  useEffect(() => {
     axios.get(`http://localhost:8000/api/ProductManager/${id}`)
       .then( res => {
         console.log("This is the GET ONE response", res)

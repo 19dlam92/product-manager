@@ -12,7 +12,6 @@ import EditProductManager from './components/EditProductManager'
 import DetailsProductManager from './components/DetailsProductManager'
 
 
-
 function App() {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -27,7 +26,7 @@ function App() {
         <Link to = "/create" className="btn btn-warning m-2">Create</Link>
         <Switch>
           <Route exact path = "/">
-            <AllProductManagers formSubmitted = { formSubmitted } setFormSubmitted = { setFormSubmitted } />
+            <AllProductManagers formSubmitted = { formSubmitted } />
           </Route>
           <Route exact path = "/create">
             <CreateProductManager formSubmitted = { formSubmitted } setFormSubmitted = { setFormSubmitted } />

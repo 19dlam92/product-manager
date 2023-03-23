@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useParams } from 'react-router'
 
-const EditProductManager = () => {
+const EditProductManager = (props) => {
 
   const [editPM, setEditPM] = useState({});
   const history = useHistory();
@@ -22,16 +21,25 @@ const EditProductManager = () => {
   }, [])
   
   const changeHandler = (e) => {
-    setEditPM({
-      ...editPM,
-      // spread operator
-      // w/e the form already
-      // set . . . . 
-      [e.target.name]: e.target.value
-      // [e.target.name]?
-      // what is name?
-      // comes from name="" in the form
-    })
+    if (e.target.type === "checkbox") {
+      setEditPM({
+        ...editPM,
+        [e.target.name]: e.target.checked
+        // this IF statement is required when there are different input values
+        // name="" / checked=""
+      })
+    } else {
+      setEditPM({
+        ...editPM,
+        // spread operator
+        // w/e the form already
+        // set . . . . 
+        [e.target.name]: e.target.value
+        // [e.target.name]?
+        // what is name?
+        // comes from name="" in the form
+      })
+    }
   }
 
   const editHandler = (e) => {
